@@ -24,7 +24,6 @@ else:
 for i in range(0, max + 1):
     for j in range(0, max + 1):
         if (i ** 2 + j) == a and (i + j ** 2) == b:
-            print((i ** 2 + j) == a)
             count += 1
 
 print(count)

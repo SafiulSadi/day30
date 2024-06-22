@@ -26,5 +26,8 @@ else:
     print(content)
 finally:
     file.close()
+print("error")
+# the problem that needs to be solved are iftar problem and perfect permutation.
+# need to look more into the buet exam for the chance to study there and mainly getting the hall facilities.
 
 

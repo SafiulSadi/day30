@@ -82,7 +82,7 @@ import math
 # #             x += arr[i][j]
 # #             print(f' array {arr[i][j]}')
 # #             print(f' x {x}')
-
+"""
 n = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 #
@@ -96,13 +96,68 @@ if arr[n[1]] >= 0:
 
 else:
     print(0)
+# """
+# t = int(input())
+# arr = list(map(int, input().split()))
+# # print(arr)
+# amazing = 0
+# curhi = arr[0]
+# curlo = arr[0]
+# for i in arr:
+#     if i > curhi:
+#         amazing += 1
+#         curhi = i
+#     elif i < curlo:
+#         amazing += 1
+#         curlo = i
+# print(amazing)
 
-
-
-
-
-
-
-
-
+#
+# def remove_element(arry):
+#     flag = False
+#     if len(arry) <= 1:
+#         flag = True
+#     else:
+#         if arry[1] - arry[0] <= 1:
+#             arry.pop(0)
+#             # print(arry)
+#         if len(arry) <= 1:
+#             flag = True
+#
+#         else:
+#             try:
+#                 remove_element(arry)
+#                 # print("NO")
+#                 if len(arry) == 1:
+#                     flag = True
+#
+#             except:
+#                 if len(arry) > 1:
+#                     flag = False
+#
+#     return flag
+#
+# t = int(input())
+#
+# while t > 0:
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     sorted_arr = sorted(arr)
+#     x = remove_element(sorted_arr)
+#     if x == True:
+#         print("YES")
+#     else:
+#         print("NO")
+#     t -=
+#
+import math
+n, k, l, c, d, p, nl, np = map(int,(input().split()))
+max_lime = c * d/ n
+max_no_liquid = (k * l)/(n * nl)
+max_salt = p/(np * n)
+arr = [max_lime, max_no_liquid, max_salt ]
+# print(arr)
+print(math.floor(min(arr)))
+toast = nl + np + 1
+q = n * l
 

@@ -150,14 +150,54 @@ else:
 #         print("NO")
 #     t -=
 #
-import math
-n, k, l, c, d, p, nl, np = map(int,(input().split()))
-max_lime = c * d/ n
-max_no_liquid = (k * l)/(n * nl)
-max_salt = p/(np * n)
-arr = [max_lime, max_no_liquid, max_salt ]
-# print(arr)
-print(math.floor(min(arr)))
-toast = nl + np + 1
-q = n * l
+# import math
+# n, k, l, c, d, p, nl, np = map(int,(input().split()))
+# max_lime = c * d/ n
+# max_no_liquid = (k * l)/(n * nl)
+# max_salt = p/(np * n)
+# arr = [max_lime, max_no_liquid, max_salt ]
+# # print(arr)
+# print(math.floor(min(arr)))
+# toast = nl + np + 1
+# q = n * l
 
+# Contest programming start
+# lets get our expectations up and in
+# t = int(input())
+# while t > 0:
+#     x = list(map(int, input().split()))
+#     distances = []
+#     for i in range(0, 11):
+#         a = i - x[0]
+#         if a < 0:
+#             a *= -1
+#         b = i - x[1]
+#         if b < 0:
+#             b *= -1
+#         c = i - x[2]
+#         if c < 0:
+#             c *= -1
+#         aw = [a, b, c]
+#         distances.append(aw)
+#
+#
+#     smallest = []
+#     for i in distances:
+#         z = sum(i)
+#         smallest.append(z)
+#
+#     print(min(smallest))
+#     t -= 1
+
+# 14 counting dragons
+k = int(input())
+l = int(input())
+m = int(input())
+n = int(input())
+d = int(input())
+count = 0
+for i in range(1, d+1):
+    if i % k == 0 or i % l == 0 or i % m == 0 or i % n ==0:
+        count += 1
+
+print(count)

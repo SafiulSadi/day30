@@ -1,4 +1,4 @@
-# a, b, c, d =map(int, input().split())
+# /a, b, c, d =map(int, input().split())
 # count = 0
 # arrs = [a, b, c, d]
 # arr = sorted(arrs)
@@ -162,7 +162,7 @@ else:
 # q = n * l
 
 # Contest programming start
-# lets get our expectations up and in
+# # lets get our expectations up and in
 # t = int(input())
 # while t > 0:
 #     x = list(map(int, input().split()))
@@ -189,15 +189,198 @@ else:
 #     print(min(smallest))
 #     t -= 1
 
-# 14 counting dragons
-k = int(input())
-l = int(input())
-m = int(input())
-n = int(input())
-d = int(input())
-count = 0
-for i in range(1, d+1):
-    if i % k == 0 or i % l == 0 or i % m == 0 or i % n ==0:
-        count += 1
+# # 14 counting dragons
+# k = int(input())
+# l = int(input())
+# m = int(input())
+# n = int(input())
+# d = int(input())
+# count = 0
+# for i in range(1, d+1):
+#     if i % k == 0 or i % l == 0 or i % m == 0 or i % n ==0:
+#         count += 1
+#
+# print(count)
 
-print(count)
+######
+# arr = []
+# for i in range(n):
+#     a = x % 10
+#     x = math.floor(x/10)
+#     # print(a)
+#     arr.append(a)
+# #     print(arr)
+# arr.reverse()
+# # print(arr)
+
+# 15 Lucky Ticket
+# n = int(input())
+# x = input()
+# arr = [int(i) for i in x]
+# print(arr)
+#
+# count1 = 0
+# count2 = 0
+# for i in range(int(n/2)):
+# #     print(arr[i])
+#     count1 += arr[i]
+# #     print(count1)
+# for i in range(int(n/2),n):
+# #     print(arr[i])
+#     count2 += arr[i]
+# #     print(count2)
+# flag = True
+# for i in arr:
+#     if i != 4:
+#         if i != 7:
+#             flag = False
+# #         print(f"flag: {flag}")
+# if count1 == count2 and flag:
+#     print("YES")
+# else:
+#     print("NO")
+
+# # 17 Arrival of the General
+# x = int(input())
+# # x = "100 95 100 100 88"
+# arr = list(map(int, input().split()))
+# # print(arr.index(min(arr)))
+# loi = arr.index(min(arr))
+# hii = arr.index(max(arr))
+# for i in range(len(arr)):
+#     if min(arr) == arr[i]:
+#         if i > loi:
+#             loi = i
+# for i in range(len(arr)):
+#     if max(arr) == arr[i]:
+#         if i < hii:
+#             hii = i
+#
+# # print(loi)
+# # print(hii)
+# q = hii - 0
+# w = len(arr) - loi - 1
+# # print(hii)
+# # print(loi)
+# sec = q + w
+#
+# # print(sec)
+# if hii > loi:
+#     sec -= 1
+#     pass
+# # if arr[hii] == arr[loi]:
+# #     sec -= 1
+# # if (hii == 0 and loi == len(arr)):
+# #     sec = 0
+# print(sec)
+
+# # 17 Amusing Joke
+#
+# x = input()
+# y = input()
+# z = input()
+# arr = []
+# brr = []
+# for i in x:
+#     arr.append(i)
+# # print(arr)
+# for i in y:
+#     arr.append(i)
+# # print(x)
+# # print(arr)
+#
+# for i in z:
+#     brr.append(i)
+#
+# crr = sorted(arr)
+# # print(crr)
+# drr = sorted(brr)
+# flag = len(crr) == len(drr)
+# # print(drr)
+# # print(brr)
+# for i in drr:
+#     if i in crr:
+#         crr.pop(crr.index(i))
+# #         print("asdfshf")
+# #         print(crr)
+# # print(crr)
+# if len(crr) == 0 and flag:
+#     print("YES")
+# else:
+#     print("NO")
+
+# # 18 Presents
+#
+# n = int(input())
+# arr = list(map(int, input().split()))
+# # print(arr)
+# brr = []
+# for i in range(len(arr)):
+#     brr.append(0)
+# #     print(brr)
+# for i in arr:
+#     brr[i-1] = arr.index(i) + 1
+# #     print(i)
+#
+# # print(brr)
+# ans = ""
+# for i in brr:
+#     ans += f"{str(i)} "
+#
+# print(ans.strip())
+
+# # 19 Epic game
+# import math
+# s, a, n = map(int, input().split())
+# flag = 0
+# # print(f"{s} {a} {n}")
+#
+# while n >= 0:
+
+#     # simon part
+#     x = math.gcd(s, n)
+#     n -= x
+#     if n < 0:
+#         flag = 1
+#         break
+#     else:
+#         flag = 0
+#     # anti simon part
+#     y = math.gcd(a, n)
+#     n -= y
+#     if n < 0:
+#         flag = 0
+#         break
+#     else:
+#         flag = 1
+#
+# print(flag)
+
+# # 20 Tram
+#
+# t = int(input())
+# arr = []
+# while t > 0:
+#     a, b = map(int, input().split())
+#     w =[a, b]
+#     arr.append(w)
+#
+#     # print(w)
+#
+#     t -= 1
+# # print([i[0] for i in arr])
+# # print([i[1] for i in arr])
+# x = [i[0] for i in arr]
+# y = [i[1] for i in arr]
+# max_person = []
+# to = 0
+# for i in range(len(x)):
+#     t = t - x[i] + y[i]
+#     max_person.append(t)
+# #     print(f"t is: {t}")
+#     q = y[i] - x[i]
+# #     print(q)
+# print(max(max_person))
+#
+# # 01703202018
+

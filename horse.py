@@ -446,38 +446,171 @@ else:
 # print(count)
 #
 
+#
+# # 24 Chips
+#
+# n, c = map(int, input().split())
+# arr = [i+1 for i in range(n)]
+#
+#
+# # print(arr)
+#
+#
+# def reducer(arry, chip):
+#     brr = []
+#     for i in arry:
+#         if i > chip:
+#             print(chip)
+#             return
+#         else:
+#             chip -= i
+#             # brr.append(chip)
+#             # print(brr)
+#             # print(f"chip: {chip}")
+#         if chip == 0:
+#             print(0)
+#             return
+#     if chip > 0:
+#         reducer(arry, chip)
+#     # else:
+#     #     return brr
+#
+#
+# if n == 1:
+#     print(0)
+# else:
+#     reducer(arr, c)
 
-# 24 Chips
+# # 25 Panoramix's Prediction
+#
+# import math
+# n, m = map(int, input().split())
+#
+#
+# # check prime:
+# def check_prime(number):
+#     if number == 2:
+#         return True
+#     elif number % 2 == 0:
+#         return False
+#     else:
+#         for i in range(3, math.floor(number/2) + 1):
+#             if number % i == 0:
+#                 # print(number % i)
+#                 return False
+#         return True
+#
+# flag = check_prime(m)
+# green_flag = True
+# for i in range(n + 1, m):
+#     a = check_prime(i)
+# #     print(a)
+#     if a:
+#         green_flag = False
+#         break
+# # print(flag)
+# # print(green_flag)
+# if flag and green_flag:
+#     print("YES")
+# else:
+#     print("NO")
 
-n, c = map(int, input().split())
-arr = [i+1 for i in range(n)]
+# 26 Way Too Long Words
+#
+# t = int(input())
+# arr = []
+# while t > 0:
+#     word = input()
+#     if len(word) > 10:
+#         a = word[0]
+#         z = word[len(word)-1]
+#         x = len(word) - 2
+#         word = f"{a}{x}{z}"
+#         print(word)
+#         # arr.append(word)
+#     else:
+#         # arr.append(word)
+#         print(word)
+#
+#     t -= 1
+#
+# # print(arr)
+#
+
+# # 27 Ultra-Fast Mathematician
+# a = input()
+# b = input()
+# c = ""
+# for i in range(len(a)):
+#     if a[i] != b[i]:
+#         c += "1"
+#     else:
+#         c += "0"
+# print(c)
+
+# # 28 Word
+# word = input()
+# w = word.lower()
+# count = 0
+# for i in range(len(word)):
+#     if word[i] < w[i]:
+#         # print(f"w[i]: {w[i]} word[i]{word[i]} and {w[i] < word[i]}")
+#         count += 1
+# #         print(count)
+#     else:
+#         count -= 1
+# #         print(count)
+# if count > 0:
+#     print(word.upper())
+# else:
+#     print(word.lower())
 
 
-# print(arr)
+# 29 Domino piling
+import math
+n, m = map(int, input().split())
 
-
-def reducer(arry, chip):
-    brr = []
-    for i in arry:
-        if i > chip:
-            print(chip)
-            return
+dom = 0
+if n <= 1 and m <= 1:
+    dom = 0
+elif n < 1 or m < 1:
+    dom = 0
+elif n >= 2 and m == 1:
+    x = math.floor(n/2)
+    dom = x
+elif m >= 2 and n == 1:
+    x = math.floor(m/2)
+    dom = x
+elif n >= 2 and m >= 2:
+    if n % 2 == 0:
+        if m % 2 == 0:
+            dom = int(n/2) * m
         else:
-            chip -= i
-            # brr.append(chip)
-            # print(brr)
-            # print(f"chip: {chip}")
-        if chip == 0:
-            print(0)
-            return
-    if chip > 0:
-        reducer(arry, chip)
-    # else:
-    #     return brr
+            dom = (math.floor(n/2) * m)
+            # print("hello")
+            # print(math.floor(n/2))
+            # print(math.floor(n/2) * m - 1)
+            # print(m - 1)
+            # print(math.floor(m/2))
+    elif n % 2 ==1:
+
+        if m % 2 == 0:
+            dom = int(m/2) * n
+        else:
+            dom = (math.floor(n/2) * m) + math.floor(m/2)
+            # print("here")
+            # print(math.floor(n/2))
+            # print(m)
+            # print(math.floor(m/2))
+            # print(math.floor(n/2))
+
+    # elif m % 2 == 0:
+    #     if n % 2 == 0:
+    #         dom = int(m / 2) * n
+    #     else:
+    #         dom = (int(m / 2) * (n - 1)) + math.floor(n / 2)
+
+print(dom)
 
 
-if n == 1:
-    print(0)
-else:
-    reducer(arr, c)
 

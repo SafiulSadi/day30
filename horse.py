@@ -383,4 +383,101 @@ else:
 # print(max(max_person))
 #
 # # 01703202018
+#
+# # 21 112A - Petya and Strings
+#
+# a = input().lower()
+# b = input().lower()
+#
+# arr = [i for i in a]
+# brr = [i for i in b]
+# # print(arr)
+# # print(brr)
+#
+# flag = 0
+# for i in range(len(arr)):
+# #     print(brr[i] < arr[i])
+#     if arr[i] < brr[i]:
+#         flag = -1
+# #         print(flag)
+#         break
+#     elif brr[i] < arr[i]:
+#         flag = 1
+# #         print(flag)
+#         break
+#     else:
+#         continue
+# print(flag)
+
+# # 22 Nearly Lucky Number
+# n = input()
+#
+# # arr = list(map(int, n.split()))
+# arr = [int(i) for i in n]
+# # print(len(n))
+# # print(arr)
+# count = 0
+# flag = True
+# for i in arr:
+#     if i == 7 or i == 4:
+#         # flag = True
+#         count += 1
+#     #         print(flag)
+#     else:
+#         flag = False
+#         #         print(flag)
+# if count == 7 or count == 4:
+#     print("YES")
+# else:
+#     print("NO")
+#
+# # 23 Blackjack
+#
+# x = int(input())
+# # x = 12
+# arr = [1,1,1,1, 2,2,2,2, 3,3,3,3, 4,4,4,4, 5,5,5,5, 6,6,6,6, 7,7,7,7, 8,8,8,8, 9,9,9,9, 10,10,10,10, 10,10,10,10, 10,10,10, 10,10,10,10, 11,11,11,11]
+# req = x - 10
+# count = 0
+# for i in arr:
+#     if req == i:
+#         count += 1
+# # print(arr)
+# # print(len(arr))
+# print(count)
+#
+
+
+# 24 Chips
+
+n, c = map(int, input().split())
+arr = [i+1 for i in range(n)]
+
+
+# print(arr)
+
+
+def reducer(arry, chip):
+    brr = []
+    for i in arry:
+        if i > chip:
+            print(chip)
+            return
+        else:
+            chip -= i
+            # brr.append(chip)
+            # print(brr)
+            # print(f"chip: {chip}")
+        if chip == 0:
+            print(0)
+            return
+    if chip > 0:
+        reducer(arry, chip)
+    # else:
+    #     return brr
+
+
+if n == 1:
+    print(0)
+else:
+    reducer(arr, c)
 

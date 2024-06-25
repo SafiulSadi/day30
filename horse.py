@@ -721,33 +721,56 @@ else:
 #         print("YES")
 #     else:
 #         print("NO")
+#
+# # 32 Translation
+# s = input()
+# t = input()
+# flag = "YES"
+# if len(s) == len(t):
+#
+#     arr = [i for i in s]
+#     # print(arr)
+#     brr = [i for i in t]
+# #     print(brr)
+#     list.reverse(brr)
+# #     print(brr)
+#     for i in range(len(arr)):
+#         if arr[i] != brr[i]:
+#             flag = "NO"
+# else:
+#     flag = "NO"
+#
+# print(flag)
 
-# 32 Translation
-s = input()
-t = input()
+# 33 Army
+n = int(input())
+arr = list(map(int, input().split()))
+# print("arr")
+# print(arr)
+brr = list(map(int, input().split()))
+# print("brr")
+# print(brr)
+brr = [i - 1 for i in brr]
+# print("brr")
+# print(brr)
+a = brr[0]
+b = brr[1]
+years = 0
 
-flag = "YES"
-if len(s) == len(t):
-
-    arr = [i for i in s]
-    print(arr)
-    brr = [i for i in t]
-    print(brr)
-    crr = brr.reverse()
-    print(brr)
-    print(crr)
-    for i in range(len(arr)):
-        if arr[i] != brr[i]:
-            flag = "NO"
-else:
-    flag = "NO"
-
-print(flag)
-
-
-
-
-
+if a == b-1:
+    years += arr[a]
+#     print("Here: arr[b-1]")
+#     print(arr[b-1])
+elif a < b-1:
+#     print("arr[a] < arr[b-1]")
+#     print(arr[a] < arr[b-1])
+#     print("arr[b-1]")
+#     print(arr[b-1])
+    while a <= b - 1:
+        years += arr[a]
+        a += 1
+#         # print(years)
+print(years)
 
 
 

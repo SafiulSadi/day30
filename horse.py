@@ -565,52 +565,194 @@ else:
 # else:
 #     print(word.lower())
 
+#
+# # 29 Domino piling
+# import math
+# n, m = map(int, input().split())
+#
+# dom = 0
+# if n <= 1 and m <= 1:
+#     dom = 0
+# elif n < 1 or m < 1:
+#     dom = 0
+# elif n >= 2 and m == 1:
+#     x = math.floor(n/2)
+#     dom = x
+# elif m >= 2 and n == 1:
+#     x = math.floor(m/2)
+#     dom = x
+# elif n >= 2 and m >= 2:
+#     if n % 2 == 0:
+#         if m % 2 == 0:
+#             dom = int(n/2) * m
+#         else:
+#             dom = (math.floor(n/2) * m)
+#             # print("hello")
+#             # print(math.floor(n/2))
+#             # print(math.floor(n/2) * m - 1)
+#             # print(m - 1)
+#             # print(math.floor(m/2))
+#     elif n % 2 ==1:
+#
+#         if m % 2 == 0:
+#             dom = int(m/2) * n
+#         else:
+#             dom = (math.floor(n/2) * m) + math.floor(m/2)
+#             # print("here")
+#             # print(math.floor(n/2))
+#             # print(m)
+#             # print(math.floor(m/2))
+#             # print(math.floor(n/2))
+#
+#     # elif m % 2 == 0:
+#     #     if n % 2 == 0:
+#     #         dom = int(m / 2) * n
+#     #     else:
+#     #         dom = (int(m / 2) * (n - 1)) + math.floor(n / 2)
+#
+# print(dom)
 
-# 29 Domino piling
-import math
-n, m = map(int, input().split())
+# # 30 Sleuth
+# v = ['A', 'E', 'I', 'O', 'U', 'Y']
+# arr = [i.lower() for i in v]
+# # print(arr)
+# arr += v
+# # print(arr)
+# a = input().strip()
+# # print(a)
+# x = a.strip("?").strip()[-1]
+# flag = "NO"
+# if x in arr:
+#     flag = "YES"
+# print(flag)
 
-dom = 0
-if n <= 1 and m <= 1:
-    dom = 0
-elif n < 1 or m < 1:
-    dom = 0
-elif n >= 2 and m == 1:
-    x = math.floor(n/2)
-    dom = x
-elif m >= 2 and n == 1:
-    x = math.floor(m/2)
-    dom = x
-elif n >= 2 and m >= 2:
-    if n % 2 == 0:
-        if m % 2 == 0:
-            dom = int(n/2) * m
-        else:
-            dom = (math.floor(n/2) * m)
-            # print("hello")
-            # print(math.floor(n/2))
-            # print(math.floor(n/2) * m - 1)
-            # print(m - 1)
-            # print(math.floor(m/2))
-    elif n % 2 ==1:
+#
+# Contest#
+# t = int(input())
+#
+# while t > 0:
+#     a, b = map(int, input().split())
+#     x, y = map(int, input().split())
+#
+#     if a > b:
+#         if x > y:
+#             print("YES")
+#         else:
+#             print("NO")
+#     elif b > a:
+#         if y > x:
+#             print("YES")
+#         else:
+#             print("NO")
+#
+#     t -= 1
+#
+#
+# #B
+# import math
+# t = int(input())
+#
+#
+# def rec(a, b, c):
+#     pass
+#
+#
+# while t > 0:
+#     x, y, k = map(int, input().split())
+#     # print(f"{x} Y {y} K {k}")
+#     if y == 2:
+#         if k == 1:
+#             x = x + 1
+#         else:
+#             x = 1
+#     else:
+#
+#         while k > 0:
+# #             print(f"before x+=1: {x}")
+#             x += 1
+# #             print(f"x+=1: {x}")
+#             while x % y == 0:
+#                 x /= y
+# #                 print(f"x /= y: {x}")
+# #             print(k)
+#             k -= 1
+#     # print(f"ans : {math.floor(x)}")
+#     print(math.floor(x))
+#     t -= 1
+# #
+# t = int(input())
+# def rec(arr, count, current):
+#     for i in brr:
+#         current += i
+#         if (current >= l and current <= r) or current == l or current == r:
+#             count += 1
+#             current = 0
+#             print("count")
+#             print(count)
+#             print("current")
+#             print(current)
+#     if len(arr):
+#
+#
+#     print(brr)
+#     print(count)
+#
+#
+# while t > 0:
+#
+#     n, l, r = map(int, input().split())
+#     arr = list(map(int, input().split()))
+#     brr = [i for i in arr if i <= r]
+#     count = 0
+#     current = 0
+#     print("Brr")
+#
+#     t -= 1
 
-        if m % 2 == 0:
-            dom = int(m/2) * n
-        else:
-            dom = (math.floor(n/2) * m) + math.floor(m/2)
-            # print("here")
-            # print(math.floor(n/2))
-            # print(m)
-            # print(math.floor(m/2))
-            # print(math.floor(n/2))
+# # 31 Triangular Number
+# import math
+# n = int(input())
+# arr = [math.floor(i * (i + 1) / 2) for i in range(1, n)]
+# # print(arr)
+# if n == 1:
+#     print("YES")
+# elif n > 1:
+#     if n in arr:
+#         print("YES")
+#     else:
+#         print("NO")
 
-    # elif m % 2 == 0:
-    #     if n % 2 == 0:
-    #         dom = int(m / 2) * n
-    #     else:
-    #         dom = (int(m / 2) * (n - 1)) + math.floor(n / 2)
+# 32 Translation
+s = input()
+t = input()
 
-print(dom)
+flag = "YES"
+if len(s) == len(t):
+
+    arr = [i for i in s]
+    print(arr)
+    brr = [i for i in t]
+    print(brr)
+    crr = brr.reverse()
+    print(brr)
+    print(crr)
+    for i in range(len(arr)):
+        if arr[i] != brr[i]:
+            flag = "NO"
+else:
+    flag = "NO"
+
+print(flag)
+
+
+
+
+
+
+
+
+
+
 
 
 

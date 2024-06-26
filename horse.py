@@ -741,40 +741,71 @@ else:
 #     flag = "NO"
 #
 # print(flag)
-
-# 33 Army
-n = int(input())
-arr = list(map(int, input().split()))
-# print("arr")
-# print(arr)
-brr = list(map(int, input().split()))
-# print("brr")
-# print(brr)
-brr = [i - 1 for i in brr]
-# print("brr")
-# print(brr)
-a = brr[0]
-b = brr[1]
-years = 0
-
-if a == b-1:
-    years += arr[a]
-#     print("Here: arr[b-1]")
-#     print(arr[b-1])
-elif a < b-1:
-#     print("arr[a] < arr[b-1]")
-#     print(arr[a] < arr[b-1])
-#     print("arr[b-1]")
-#     print(arr[b-1])
-    while a <= b - 1:
-        years += arr[a]
-        a += 1
-#         # print(years)
-print(years)
-
-
-
-
+#
+# # 33 Army
+# n = int(input())
+# arr = list(map(int, input().split()))
+# # print("arr")
+# # print(arr)
+# brr = list(map(int, input().split()))
+# # print("brr")
+# # print(brr)
+# brr = [i - 1 for i in brr]
+# # print("brr")
+# # print(brr)
+# a = brr[0]
+# b = brr[1]
+# years = 0
+#
+# if a == b-1:
+#     years += arr[a]
+# #     print("Here: arr[b-1]")
+# #     print(arr[b-1])
+# elif a < b-1:
+# #     print("arr[a] < arr[b-1]")
+# #     print(arr[a] < arr[b-1])
+# #     print("arr[b-1]")
+# #     print(arr[b-1])
+#     while a <= b - 1:
+#         years += arr[a]
+#         a += 1
+# #         # print(years)
+# print(years)
+#
+# # 34 Reconnaissance 2
+# n = int(input())
+# arr = list(map(int, input().split()))
+# # print(arr)
+# brr = [i for i in arr]
+# brr.append(arr[0])
+# # print(brr)
+# heights = []
+# for i in range(len(arr)):
+#     distance = brr[i] - brr[i + 1]
+#     if distance < 0:
+#         distance *= -1
+#     heights.append(distance)
+#
+# # print(heights)
+# # print("heights")
+# # print(min(heights))
+# # print("min(heights)")
+# # print(heights.index(min(heights)) + 1)
+# w = heights.index(min(heights)) + 1
+#
+# if w > n:
+#     w = 1
+#     b = 2
+# else:
+#     w = heights.index(min(heights)) + 1
+#     b = w + 1
+#     if b > n:
+#         b = 1
+# if n != 2:
+#     print(f"{w} {b}")
+# else:
+#     print("1 2")
+#
 
 
 

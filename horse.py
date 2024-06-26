@@ -753,7 +753,7 @@ else:
 # brr = [i - 1 for i in brr]
 # # print("brr")
 # # print(brr)
-# a = brr[0]
+# a = brr
 # b = brr[1]
 # years = 0
 #
@@ -807,6 +807,42 @@ else:
 #     print("1 2")
 #
 
+# 35 Borze
+x = input()
+arr = [i for i in x]
+arr.append("0")
+# print(arr)
+brr = []
+curr = ""
+cu = ""
+for i in range(len(arr)-1):
 
+    curr += arr[i]
+    cu = arr[i + 1]
+#     print("CU")
+#     print(cu)
+#     print("curr")
+#     print(curr)
 
+    if curr == "-.":
+        brr.append("1")
+        curr = ""
+    elif curr == "--":
+        brr.append("2")
+        curr = ""
+    elif curr == ".-":
+        curr = "-"
+        brr.append("0")
+    elif curr == "..":
+        curr = "."
+        brr.append("0")
+    if cu == "0" and curr == ".":
+        brr.append("0")
+#         print(f"here {curr}")
+# print(brr)
+# print(brr)
+v = ""
+for i in brr:
+    v += i
+print(v)
 

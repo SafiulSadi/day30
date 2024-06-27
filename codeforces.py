@@ -47,53 +47,139 @@
 #
 #     n -= 1
 #
+# c
+# t = int(input())
+#
+# while t > 0:
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     brr = list(map(int, input().split()))
+#     print(sum(arr))
+#     print(sum(brr))
+#     a = (sum(arr))
+#     b = (sum(brr))
+#     c = max(a, b)
+#     d = min(a, b)
+#     print(c)
+#     print(d)
+#     t -= 1
+#
+#
+# b
+#
+#
 # t = int(input())
 #
 # while t > 0:
 #     a = input()
 #     b = input()
+#     x = []
 #     l = len(a)
 #     brr = [i for i in b]
 #     arr = [i for i in a]
-#     for i in brr:
+#     crr = []
+#     for i in range(len(brr)):
 #         # print(f"i {i} in a {a} is true: {i not in a}")
 #
-#         if i not in a:
+#         if brr[i] not in a:
 #             l += 1
-#             arr.append(i)
-#         print("arr")
-#         print(arr)
-#         print("brr")
-#         print(brr)
-#     crr = []
+#             crr.append(i)
+#         # print("arr")
+#         # print(arr)
+#         # print("brr")
+#         # print(brr)
 #     for i in arr:
 #         if i in brr:
-#             print("i")
-#             print(i)
+#             # print("i")
+#             # print(i)
+#             pass
 #
 # #     print(a in b)
-#     print(l)
+#     for i in crr:
+#         # print("crri")
+#         # print(crr[i])
+#         # print("i")
+#         # print(i)
+#         # print("brr")
+#         # print(brr)
+#         # brr.pop(i)
+#         # print("brr")
+#         # print(brr)
+#         # i -= 1
+#         x = [brr[i] for i in range(len(brr)) if i in crr]
+#     #     print("XXX")
+#     #     print(x)
+#     # print(l)
+#     # print("crr")
+#     # print(crr)
+#     # print("brr")
+#     # print(brr)
+#     print(len(arr)+len(x))
 #
 #
 #
 #     t -= 1
 #
+# arr = list(map(int, input().split()))
+# m = max(arr)
+# # print(arr)
+# r = 7- m
+# # print("r")
+# # print(r)
+# if r == 6:
+#     print(f"1/1")
+# elif r == 5:
+#     print(f"{r}/6")
+# elif r == 4:
+#     print(f"2/3")
+# elif r == 3:
+#     print(f"1/2")
+# elif r == 2:
+#     print(f"1/3")
+# elif r == 1:
+#     print(f"1/6")
 
-t = int(input())
+# # A2oj dinks
+# n = int(input())
+# arr = list(map(int, input().split()))
+#
+# x = 0
+# for i in arr:
+#     x += i/100
+# print((x/n)*100)
+#
+#
+# # Lunch Rush
+#
+# n, k = map(int, input().split())
+# arr = []
+# while n > 0:
+#     x = list(map(int, input().split()))
+#     arr.append(x)
+#
+#
+#     n -= 1
+# # print(arr)
+# fs = []
+# for i in arr:
+#     if k >= i[1]:
+# #         print(i[0])
+#         fs.append(i[0])
+#     else:
+#         f = i[0] - (i[1] - k)
+# #         print(f"f: {i[0] - (i[1] - k)}")
+#         fs.append(f)
+#
+# # print(fs)
+# print(max(fs))
 
-while t > 0:
-    n = int(input())
-    arr = list(map(int, input().split()))
-    brr = list(map(int, input().split()))
-    print(sum(arr))
-    print(sum(brr))
-    a = (sum(arr))
-    b = (sum(brr))
-    c = max(a, b)
-    d = min(a, b)
-    print(c)
-    print(d)
-    t -= 1
+# 38 watermelon
+x = int(input())
 
-
+if x < 4:
+    print("NO")
+elif x % 2 == 0:
+    print("YES")
+else:
+    print("NO")
 

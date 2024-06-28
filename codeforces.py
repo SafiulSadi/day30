@@ -172,14 +172,18 @@
 #
 # # print(fs)
 # print(max(fs))
+#
+# # 38 watermelon
+# x = int(input())
+#
+# if x < 4:
+#     print("NO")
+# elif x % 2 == 0:
+#     print("YES")
+# else:
+#     print("NO")
+#
 
-# 38 watermelon
-x = int(input())
 
-if x < 4:
-    print("NO")
-elif x % 2 == 0:
-    print("YES")
-else:
-    print("NO")
+
 

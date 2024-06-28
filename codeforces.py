@@ -183,7 +183,149 @@
 # else:
 #     print("NO")
 #
+#
+# # 39 A. Taymyr is calling you
+# n, m, z = map(int, input().split())
+# count = 0
+# arr = [i for i in range(1, z+1) if i % m == 0]
+# brr = [i for i in range(1, z+1) if i % n == 0]
+#
+#
+# for i in brr:
+#     if i in arr:
+#         count += 1
+#
+# print(count)
+#
+#
+# # 40 Holiday Of Equality
+#
+# n = int(input())
+# arr = list(map(int, input().split()))
+# x = max(arr)
+# brr = [x - i for i in arr]
+# print(sum(brr))
+#
+# # 41 A. PolandBall and Hypothesis
+# n = int(input())
+#
+#
+# def is_prime(a):
+#     if a == 1:
+#         return True
+#     if a == 2:
+#         return True
+#     if a == 3:
+#         return True
+#
+#     if a >= 3:
+#         for i in range(2, a):
+#             if a % i == 0:
+#                 return False
+#         return True
+#
+#
+# # a = is_prime(n)
+# # print(a)
+# for m in range(1, 1000):
+#     x = n * m + 1
+#     flag = is_prime(x)
+#     if flag:
+#         pass
+#     else:
+#         print(m)
+#         break
+
+# # 42 A. New Year and Hurry
+# t = 4 * 60
+# n, k = map(int, input().split())
+# count = 0
+# nrr = [i * 5 for i in range(1, n+1)]
+# time = t - k
+# for i in nrr:
+#     if i <= time:
+#         count += 1
+#         time -= i
+#
+# print(count)
+#
+# # 43 A. Bachgold Problem
+# import math
+# n = int(input())
+#
+#
+# def is_prime(a):
+#     if a == 1:
+#         return True
+#     if a == 2:
+#         return True
+#     if a == 3:
+#         return 3
+#     elif a > 3:
+#         for i in range(2, math.floor((a+1)/2)):
+#             if a % i == 0:
+#                 return False
+#         return True
+#
+#
+# if n % 2 == 0:
+#     arr = [2 for i in range(math.floor(n / 2))]
+# else:
+#     arr = [2 for i in range(math.floor(n/2)-1)]
+#     arr.append(3)
+# # print(arr)
+# x = ""
+# for i in arr:
+#     x += f"{i} "
+# print(len(arr))
+# print(x.strip())
+#
+# # 44 A. Compote
+#
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+#
+# arr = [1 for i in range(1, a + 1)]
+# brr = [2 for i in range(0, b + 1, 2) if i <= b]
+# if sum(brr) > b:
+#     brr.pop(-1)
+# crr = [4 for i in range(0, c + 1, 4) if i <= c]
+# if sum(crr) > c:
+#
+#     crr.pop(-1)
+# # for i in range(0, c + 1, 4):
+# #     print(i)
+# #     print(i <= c)
+# # print(arr)
+# # print(brr)
+# # print(crr)
+# w = [arr, brr, crr]
+# x = min(map(len, w))
+# # print(x)
+# count = 0
+# for i in range(x):
+#     count += arr[i] + brr[i] + crr[i]
+# print(count)
 
 
+# 46 Anton and Danik
+
+n = int(input())
+s = input()
+arr = []
+drr = []
+for i in s:
+    if i == "A":
+        arr.append(1)
+    else:
+        drr.append(1)
+if len(arr) > len(drr):
+    print("Anton")
+elif len(drr) > len(arr):
+    print("Danik")
+else:
+    print("Friendship")
 
 

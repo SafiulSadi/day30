@@ -332,24 +332,20 @@
 # 47 A. Buy a Shovel
 
 k, r = map(int, input().split())
-m = k % 10
-print("m")
-print(m)
+x = k % 10
 count = 0
-import math
-print("XXXX")
-y = math.lcm(10, k, r)
-print(y)
-if m == 0:
+prices = []
+for i in range(0, 1000):
+    prices.append(k)
+
+# print(prices)
+
+for i in range(1, 1000):
+    x = sum(prices[:i])
+#     print("XXX")
+#     print(x)
     count += 1
-else:
-    x = math.lcm(m, r)
-    print(x)
-    count = math.floor(x / r)
+    if x % 10 == r or x % 10 == 0:
 
-
+        break
 print(count)
-
-
-
-

@@ -310,22 +310,46 @@
 # print(count)
 
 
-# 46 Anton and Danik
+# # 46 Anton and Danik
+#
+# n = int(input())
+# s = input()
+# arr = []
+# drr = []
+# for i in s:
+#     if i == "A":
+#         arr.append(1)
+#     else:
+#         drr.append(1)
+# if len(arr) > len(drr):
+#     print("Anton")
+# elif len(drr) > len(arr):
+#     print("Danik")
+# else:
+#     print("Friendship")
+#
 
-n = int(input())
-s = input()
-arr = []
-drr = []
-for i in s:
-    if i == "A":
-        arr.append(1)
-    else:
-        drr.append(1)
-if len(arr) > len(drr):
-    print("Anton")
-elif len(drr) > len(arr):
-    print("Danik")
+# 47 A. Buy a Shovel
+
+k, r = map(int, input().split())
+m = k % 10
+print("m")
+print(m)
+count = 0
+import math
+print("XXXX")
+y = math.lcm(10, k, r)
+print(y)
+if m == 0:
+    count += 1
 else:
-    print("Friendship")
+    x = math.lcm(m, r)
+    print(x)
+    count = math.floor(x / r)
+
+
+print(count)
+
+
 
 

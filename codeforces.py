@@ -3,7 +3,7 @@
 # n, d = map(int, input().split())
 # arr = list(map(int, input().split()))
 # brr = sorted(arr)
-# # print(brr)
+# # # print(brr)
 # # brr.append(-100)
 # # print(brr)
 # count = 0
@@ -138,6 +138,7 @@
 #     print(f"1/3")
 # elif r == 1:
 #     print(f"1/6")
+import math
 
 # # A2oj dinks
 # n = int(input())
@@ -328,24 +329,218 @@
 # else:
 #     print("Friendship")
 #
+#
+# # 47 A. Buy a Shovel
+#
+# k, r = map(int, input().split())
+# x = k % 10
+# count = 0
+# prices = []
+# for i in range(0, 1000):
+#     prices.append(k)
+#
+# # print(prices)
+#
+# for i in range(1, 1000):
+#     x = sum(prices[:i])
+# #     print("XXX")
+# #     print(x)
+#     count += 1
+#     if x % 10 == r or x % 10 == 0:
+#
+#         break
+# print(count)
 
-# 47 A. Buy a Shovel
+# # 48 A. Night at the Museum
+# a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't',  's', 't', 'u', 'v', 'w', 'x', 'y', 'z',]
+# arr = [i.lower() for i in a]
+# brr = arr.reverse()
+# print(arr)
+# x = input()
+# xrr = [i for i in x]
+# count = 0
+# pt = 0
+# pt1 = 0
+# pt2 = 25
+# for i in xrr:
+#     if i in arr:
+#         distance = min(abs(pt1 - a.index(i)), abs(pt2 - a.index(i)))
+#         if
+#         print("Count")
+#         print(count)
+#         pt = arr.index(i)
+#         print("pt")
+#         print(pt)
+#
+# print(count)
+#
 
-k, r = map(int, input().split())
-x = k % 10
-count = 0
-prices = []
-for i in range(0, 1000):
-    prices.append(k)
+# # 48 A. Night at the Museum
+# arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't',  's', 't', 'u', 'v', 'w', 'x', 'y', 'z',]
+# brr = [i for i in arr]
+# brr.reverse()
+# print(brr)
+# pointer = 0
+# pointer_a = 0
+# pointer_b = 0
+# x = input()
+#
+# distance1 = 0
+# distance2 = 0
+# count = 0
+# for i in x:
+#     if i in arr:
+#
+#         distance1 = abs(pointer_a - arr.index(i))
+#         print("distance1")
+#         print(distance1)
+#         pointer_a = arr.index(i)
+#         print("pointer a")
+#         print(pointer_a)
+#     if i in brr:
+#         distance2 = abs(pointer_b - brr.index(i))
+#         print("distance2")
+#         print(distance2)
+#         print("pointer n")
+#         print(pointer_b)
+#
+#     count += min(distance1, distance2)
+#     print("count")
+#     print(count)
+# print("total count")
+# print(count)
 
-# print(prices)
 
-for i in range(1, 1000):
-    x = sum(prices[:i])
-#     print("XXX")
-#     print(x)
-    count += 1
-    if x % 10 == r or x % 10 == 0:
+# # 49 A. The New Year: Meeting Friends
+#
+# arr = list(map(int, input().split()))
+# distances = [abs(i- arr[0]) + abs(i- arr[1]) + abs(i- arr[2]) for i in range(0, 101)]
+# # print(distances)
+# print(min(distances))
+#
+# # 50 A. One-dimensional Japanese Crossword
+#
+# n = int(input())
+# s = input()
+# g = 0
+# c = 0
+# arr = [i for i in s]
+# grr = []
+# crr = []
+# for i in arr:
+#
+#     if i == "B":
+#         crr.append("B")
+#         # print(crr)
+#     if len(crr) > 0 and i == "W":
+#         grr.append(crr)
+#         crr = []
+# if len(crr) > 0:
+#     grr.append(crr)
+#
+# # print(grr)
+#
+# print(len(grr))
+# xrr = [len(i) for i in grr]
+# abc = ""
+# for i in xrr:
+#     abc += f"{i} "
+#
+# print(abc.strip())
+#
 
-        break
-print(count)
+# # 51 A. Crazy Computer
+# t, d = map(int, input().split())
+# arr = list(map(int, input().split()))
+# arr.append(0)
+# xs = []
+# count = 0
+# for i in range(len(arr)-1):
+#     count += 1
+#     if abs(arr[i + 1] - arr[i]) > d:
+#         # print("count inside")
+#         # print(count)
+#         xs.append(count)
+#         count = 0
+# # print(count)
+#
+# if d >= arr[-2]:
+#     print(len(arr)-1)
+# else:
+#     print(xs[-1])
+#
+#
+# # contest
+# # a
+# import math
+# t = int(input())
+# while t > 0:
+#     n, k = map(int, input().split())
+#     time = 0
+#     for i in range(1, n+1):
+#         time += k
+#
+#     time -= k
+#     time +=1
+#     print(time)
+#     t -= 1
+#
+# b
+
+# brr = sorted(arr)
+# coin = 0
+# for i in range(len(arr)):
+#     x = abs(arr[i] - brr[i])
+#     if abs(arr[i] - brr[i]) > 0:
+#         coin += x
+# import math
+# t = int(input())
+# while t > 0:
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     arr.append(100000)
+#     brr = sorted(arr)
+#     coin = 0
+#     for i in range(len(arr)-1):
+#         if arr[i+1] - arr[i] < 0:
+#             coin += abs(arr[i+1] - arr[i])
+#             print(coin)
+    # for i in range(len(arr)):
+    #     m = abs(arr[i] - brr[i])
+    #     if m < 0:
+    #         coin += m
+
+    # print(coin)
+    # t -= 1
+
+n = int(input())
+xrr = []
+while n > 0:
+    arr = list(input().split())
+    xrr.append(arr)
+    n -= 1
+# print(xrr)
+flag = "NO"
+for i in xrr:
+    if int(i[1]) > int(i[2]) and int(i[1]) >= 2400:
+        flag = "YES"
+print(flag)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -513,20 +513,29 @@ import math
     # print(coin)
     # t -= 1
 
-n = int(input())
-xrr = []
-while n > 0:
-    arr = list(input().split())
-    xrr.append(arr)
-    n -= 1
-# print(xrr)
-flag = "NO"
-for i in xrr:
-    if int(i[1]) > int(i[2]) and int(i[1]) >= 2400:
-        flag = "YES"
-print(flag)
+# n = int(input())
+# xrr = []
+# while n > 0:
+#     arr = list(input().split())
+#     xrr.append(arr)
+#     n -= 1
+# # print(xrr)
+# flag = "NO"
+# for i in xrr:
+#     if int(i[1]) < int(i[2]) and int(i[1]) >= 2400:
+#         flag = "YES"
+# print(flag)
 
+n, h = map(int, input().split())
+arr = list(map(int, input().split()))
+count = 0
+for i in arr:
+    if i > h:
+        count += 2
+    else:
+        count += 1
 
+print(count)
 
 
 

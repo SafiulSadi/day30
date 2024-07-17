@@ -536,19 +536,35 @@ import math
 #         count += 1
 #
 # print(count)
+# #
+# n = input()
+# text = ""
+# for i in range(1, int(n) + 1):
+#     text += str(i)
+# print(text[int(n)-1])
 #
-n = input()
-text = ""
-for i in range(1, int(n) + 1):
-    text += str(i)
-print(text[int(n)-1])
 
+n = int(input())
+c = 0
+for i in range(1, n):
+    x = 1
+    if n <= 1:
+        break
+    else:
+        n = n - x
+        # print(n)
+        # print("n")
+        c += 1
+#         print(c)
+#         print("C")
+        if x == 1:
+            x += 1
+        else:
+            x -= 1
+if c == 0:
+    c = 1
 
-
-
-
-
-
+print(c)
 
 
 

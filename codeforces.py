@@ -525,20 +525,23 @@ import math
 #     if int(i[1]) < int(i[2]) and int(i[1]) >= 2400:
 #         flag = "YES"
 # print(flag)
-
-n, h = map(int, input().split())
-arr = list(map(int, input().split()))
-count = 0
-for i in arr:
-    if i > h:
-        count += 2
-    else:
-        count += 1
-
-print(count)
-
-
-
+#
+# n, h = map(int, input().split())
+# arr = list(map(int, input().split()))
+# count = 0
+# for i in arr:
+#     if i > h:
+#         count += 2
+#     else:
+#         count += 1
+#
+# print(count)
+#
+n = input()
+text = ""
+for i in range(1, int(n) + 1):
+    text += str(i)
+print(text[int(n)-1])
 
 
 

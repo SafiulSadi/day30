@@ -543,31 +543,26 @@ import math
 #     text += str(i)
 # print(text[int(n)-1])
 #
-
+import math
 n = int(input())
-c = 0
-for i in range(1, n):
+arr = [1, 2]
+count = 0
+# for i in range(0, n):
+#
+#     n -= arr[i % 2]
+#     count += 1
+#     if n == 0:
+#         break
+#     if n < 0:
+#         count -= 1
+# print(count)
+x = 0
+if n% 3 >= 1:
     x = 1
-    if n <= 1:
-        break
-    else:
-        n = n - x
-        # print(n)
-        # print("n")
-        c += 1
-#         print(c)
-#         print("C")
-        if x == 1:
-            x += 1
-        else:
-            x -= 1
-if c == 0:
-    c = 1
 
-print(c)
-
-
-
+print(2 * math.floor(n / 3) + x)
+# print(2 * math.floor(n / 3))
+# print(n % 3)
 
 
 

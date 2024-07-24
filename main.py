@@ -31,15 +31,29 @@
 # # need to look more into the buet exam for the chance to study there and mainly getting the hall facilities.
 #
 #
+# #
+# height = float(input("Height: "))
+# weight = int(input("Weight: "))
 #
-height = float(input("Height: "))
-weight = int(input("Weight: "))
-
-if height > 3:
-    raise ValueError("Human Height should not be over 3 meters.")
-
-bmi = weight / height ** 2
-print(bmi)
+# if height > 3:
+#     raise ValueError("Human Height should not be over 3 meters.")
+#
+# bmi = weight / height ** 2
+# print(bmi)
 # this is after the quota war
+n = int(input())
+arr = [1, 2, 3, 4, 5]
+count = 0
+
+if n % 5 == 0:
+    count += n//5
+else:
+    count += n//5 + 1
+print(int(count))
+
+
+
+
+
 
 

@@ -131,18 +131,89 @@
 #             flag = True
 #
 
-n = int(input())
-arr = [1 for i in range(n)]
-brr = [1 for _ in range(n)]
-crr = [arr]
+# n = int(input())
+# arr = [1 for i in range(n)]
+# brr = [1 for _ in range(n)]
+# crr = [arr]
+#
+# for i in range(n-1):
+#     ar = [1]
+#     crr.append(ar)
+# # print(crr)
+# for i in range(1, n):
+#     for j in range(1, n):
+#         x = crr[i-1][j] + crr[i][j-1]
+#         crr[i].append(x)
+# # print(crr)
+# print(crr[-1][-1])
+# xrr = input().split(", ")
+# if xrr[0] == "{}":
+#     print(0)
+# else:
+#     # print(xrr)
+#     start = xrr[0]
+#     end = xrr[-1]
+#     xrr[0] = start[1]
+#     xrr[-1] = end[-2]
+# #     print(start[1])
+# #     print(end[-2])
+# #     print(xrr)
+#     srr = set()
+#     for i in xrr:
+#         srr.add(i)
+#     print(len(srr))
+# def minus(x):
+#
+#     return 5 - int(x)
+#
+#
+# n, k = map(int, input().split())
+# arr = list(map(minus, input().split()))
+# brr = [i-k for i in arr]
+# count = 0
+# for i in brr:
+#     if i >= 0:
+#         count += 1
+# print(count//3)
+#
+# xrr = list(map(int, input().split()))
+# s = input()
+# arr = [int(i) for i in s]
+# brr = []
+# for i in arr:
+#     z = xrr[i-1]
+#     brr.append(z)
+# print(sum(brr))
+#
+# n = int(input())
+# arr = list(map(int, input().split()))
+# u = 0
+# c = 0
+# p = 0
+# for i in arr:
+#     if i > 0:
+#         p += i
+#     else:
+#         c += 1
+#         if p > 0:
+#             p -= 1
+#         else:
+#             u += 1
+# print(u)
+x = 4//2
+y = 5 ** 3
+name = "samiul islam"
+srr = set()
+arr = [i+"abc" for i in name if i == "s" or i == "m"]
+for i in arr:
+    srr.add(i)
+print(srr)
+print(arr)
+for i in range(0, x):
+    print(i)
+print(f"This is a number: {x}")
+print(y)
 
-for i in range(n-1):
-    ar = [1]
-    crr.append(ar)
-# print(crr)
-for i in range(1, n):
-    for j in range(1, n):
-        x = crr[i-1][j] + crr[i][j-1]
-        crr[i].append(x)
-# print(crr)
-print(crr[-1][-1])
+
+
+

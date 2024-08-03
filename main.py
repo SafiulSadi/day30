@@ -200,19 +200,149 @@
 #         else:
 #             u += 1
 # print(u)
-x = 4//2
-y = 5 ** 3
-name = "samiul islam"
-srr = set()
-arr = [i+"abc" for i in name if i == "s" or i == "m"]
-for i in arr:
-    srr.add(i)
-print(srr)
-print(arr)
-for i in range(0, x):
-    print(i)
-print(f"This is a number: {x}")
-print(y)
+# x = 4//2
+# y = 5 ** 3
+# name = "samiul islam"
+# srr = set()
+# arr = [i+"abc" for i in name if i == "s" or i == "m"]
+# for i in arr:
+#     srr.add(i)
+# print(srr)
+# print(arr)
+# for i in range(0, x):
+#     print(i)
+# print(f"This is a number: {x}")
+# print(y)
+
+def bst(brr, start, end, x):
+    mid = (start + end)//2
+    if start > end:
+        print(-1)
+        return -1
+    if brr[mid] == x:
+        print(mid)
+        return mid
+    elif brr[mid] > x:
+        end = mid - 1
+        bst(brr, start, end, x)
+
+    elif brr[mid] < x:
+        start = mid + 1
+        bst(brr, start, end, x)
+
+#
+# # Binary search implementation
+# arr = [1, 2, 4, 6, 8, 9, 10, 15, 28, 36]
+#
+# left = 0
+# right = len(arr)
+# ans = 36
+# print(bst(brr=arr, start=left, end=right, x=ans))
+#
+# print()
+
+# implementation of bubble sort
+#
+#
+# def bubble_sort(array):
+#     for i in range(len(array) - 1):
+#         for j in range(len(array) - i - 1):
+#             if array[j] > array[j + 1]:
+#                 temp = array[j]
+#                 array[j] = array[j + 1]
+#                 array[j + 1] = temp
+#     return array
+#
+#
+# arr = [5, 6, 1, 7, 50, 17, 20, 64, 23]
+# print(arr)
+# print(bubble_sort(array=arr))
+
+#
+# s, d = 0, 0
+# n = int(input())
+# arr = list(map(int, input().split()))
+# player = [0, 0]
+# i = 0
+# while len(arr) > 0:
+#
+#     mx = max(arr[0], arr[-1])
+#     # print(arr)
+#     if mx == arr[0]:
+#         player[i] += mx
+#         arr.pop(0)
+#         i += 1
+#         i %= 2
+#     elif mx == arr[-1]:
+#         player[i] += mx
+#         arr.pop(-1)
+#         i += 1
+#         i %= 2
+#
+# print(f"{player[0]} {player[1]}")
+
+#
+# arr = []
+# for i in range(5):
+#     n = list(map(int, input().split()))
+#     arr.append(n)
+# index_i = 0
+# index_j = 0
+# # print(arr)
+# for i in range(len(arr)):
+#     for j in range(5):
+#         if arr[i][j] == 1:
+#             index_i = i
+#             index_j = j
+#             break
+# # print(index_i)
+# # print(index_j)
+# move1 = abs(index_i - 2) + abs(index_j - 2)
+# print(move1)
+
+#
+# nb = input()
+# n = input()
+# arr = [i for i in n]
+# # print(arr)
+# count = 0
+# cur = arr[0]
+#
+# for i in range(len(arr)-1):
+#     prev = arr[i]
+#     next = arr[i+1]
+# #     print(cur)
+# #     print(next)
+# #     print(prev)
+#     if cur != next:
+#         cur = next
+#     elif cur == next:
+#         count += 1
+#
+#
+# print(count)
+
+#
+# n = int(input())
+# arr = []
+# ans = 0
+# for i in range(n):
+#     x = input()
+#     for i in x:
+#         if i == "+":
+#             ans += 1
+#             break
+#
+#             # print("+")
+#         elif i == "-":
+#             ans -= 1
+#             break
+#             # print("-")
+#
+# print(ans)
+
+
+
 
 
 

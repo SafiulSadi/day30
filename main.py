@@ -213,22 +213,22 @@
 #     print(i)
 # print(f"This is a number: {x}")
 # print(y)
-
-def bst(brr, start, end, x):
-    mid = (start + end)//2
-    if start > end:
-        print(-1)
-        return -1
-    if brr[mid] == x:
-        print(mid)
-        return mid
-    elif brr[mid] > x:
-        end = mid - 1
-        bst(brr, start, end, x)
-
-    elif brr[mid] < x:
-        start = mid + 1
-        bst(brr, start, end, x)
+#
+# def bst(brr, start, end, x):
+#     mid = (start + end)//2
+#     if start > end:
+#         print(-1)
+#         return -1
+#     if brr[mid] == x:
+#         print(mid)
+#         return mid
+#     elif brr[mid] > x:
+#         end = mid - 1
+#         bst(brr, start, end, x)
+#
+#     elif brr[mid] < x:
+#         start = mid + 1
+#         bst(brr, start, end, x)
 
 #
 # # Binary search implementation
@@ -341,10 +341,243 @@ def bst(brr, start, end, x):
 #             # print("-")
 #
 # print(ans)
+#
+# n = input()
+# arr = [i for i in n]
+#
+# arr[0] = arr[0].upper()
+# s = ""
+# for i in arr:
+#     s += i
+# print(s)
+# arr = list(map(int, input().split("+")))
+# brr = sorted(arr)
+# ans = f"{brr[0]}"
+# for i in range(1, len(brr)):
+#     ans += f"+{brr[i]}"
+# print(ans)
+#
+# w1, h1, w2, h2 = map(int, input().split())
+# low = w1 + 2 * h1 + 2
+# hi = w2 + 2 * h2 + 2
+# total = hi + low
+# # print(low)
+# # print(hi)
+# if w1 != w2:
+#     total += abs(w1 - w2)
+# print(total)
+#
+#
+# n = int(input())
+# if n == 0:
+#     print(0)
+# elif n == 2:
+#     print(2)
+# else:
+#     print(1)
+
+# n = int(input())
+# arr = []
+# pos = 0
+# neg = 0
+# while n > 0:
+#     x = list(map(int, input().split()))
+#     arr.append(x)
+#     n -= 1
+# for i in range(len(arr)):
+#     if arr[i][0] <= 0:
+#         neg += 1
+#     else:
+#         pos += 1
+# if pos > 1 and neg > 1:
+#     print("NO")
+# else:
+#     print("YES")
+# #
+# a, b = map(int, input().split())
+# count = 0
+# while not (a > b):
+#     a *= 3
+#     b *= 2
+#     count += 1
+# # print(count)
+# diction = {
+#     "Tetrahedron": 4,
+#     "Cube": 6,
+#     "Octahedron": 8,
+#     "Dodecahedron": 12,
+#     "Icosahedron": 20
+# }
+# n = int(input())
+# side = 0
+# while n > 0:
+#     x = input()
+#     side += diction[x]
+#     n -= 1
+# # print(diction["Octahedron"])
+# print(side)
+#
+# n, k = map(int, input().split())
+# 
+# div = n // k
+# rem = n % k
+# if(div % 2 == 1):
+#     print("YES")
+# else:
+#     print("NO")
+#
+# x = input()
+# x = x.lower()
+# jest = {"1", "a", "e", "i", "o", "u", "3", "5", "7", "9"}
+# arr = [i for i in x if i in jest]
+# print(len(arr))
+#
+# t = int(input())
+#
+# while t > 0:
+#     n = int(input())
+#     s = input()
+#     arr = [i for i in s]
+#     ans = ""
+#     if arr[n - 1] == "1":
+#         for i in range(n):
+#             ans += "1"
+#     else:
+#         for i in range(n):
+#             ans += "0"
+#     print(ans)
+#     t -= 1
+
+#
+# t = int(input())
+#
+# while t > 0:
+#     n = int(input())
+#     if n % 2 == 0:
+#         print("YES")
+#     else:
+#         print("NO")
+#
+#     t -= 1
+# arr = list(map(int, input().split()))
+# m = max(arr)
+# arr.pop(arr.index(max(arr)))
+# # print(arr)
+# brr = []
+# for i in range(len(arr)):
+#     x = m - arr[i]
+#     brr.append(x)
+# ans = ""
+# for i in brr:
+#     ans += f" {i}"
+# print(ans.strip())
+# #
+# s = input()
+# arr = [i for i in s if i == "a"]
+# brr = [i for i in s if i != "a"]
+# # print(arr)
+# if len(arr) > len(brr):
+#     print(len(s))
+# else:
+#     print(len(arr) * 2 - 1)
+#
+# y = input()
+# year = int(y) + 1
+# year = str(year)
+# # print(year)
+# arr = {i for i in year}
+# while len(arr) != 4:
+#     year = int(year) + 1
+#     year = str(year)
+#     arr = {int(i) for i in year}
+# print(year)
+# arr = list(map(int, input().split()))
+# # print(arr)
+# m = min(arr[0], arr[2], arr[3])
+# arr[0] = arr[0] - m
+# arr[2] = arr[2] - m
+# arr[3] = arr[3] - m
+# n = min(arr[0], arr[1])
+# print(m * 256 + n * 32)
+#
+# t = int(input())
+#
+# while t > 0:
+#     n = int(input())
+#     x = input()
+#     count = 0
+#     arr = [i for i in x]
+#     a = arr.count("A")
+#     b = arr.count("B")
+#     c = arr.count("C")
+#     d = arr.count("D")
+#     if a <= n:
+#         count += a
+#     else:
+#         count += n
+#     if b <= n:
+#         count += b
+#     else:
+#         count += n
+#     if c <= n:
+#         count += c
+#     else:
+#         count += n
+#     if d <= n:
+#         count += d
+#     else:
+#         count += n
+#
+#     print(count)
+#     t -= 1
+# #
+# import math
+# from typing import List
+#
+# t = int(input())
+#
+# while t > 0:
+#     n, k = map(int, input().split())
+#     count = 0
+#     arr: list[int] = list(map(int, input().split()))
+#     x = max(arr)
+#     brr = [i + 4 for i in arr]
+#     y = max(brr)
+#     for i in range(len(arr)):
+#         while x % arr[i] != 0:
+#             x += 1
+#     for i in range(len(brr)):
+#         while y % brr[i] != 0:
+#             y += 1
+#     print(x)
+#     print(y)
+#     print("lcm")
+#     print(math.lcm(x, y))
+#     t -= 1
 
 
+def swap(a, b):
+    temp = a
+    a = b
+    b = a
 
 
+t = int(input())
 
+while t > 0:
+    n = int(input())
+    arr = list(map(int, input().split()))
+    brr = []
+    for i in range(0, len(arr)):
+        if arr[i] % 2 == 0:
+            brr.append(arr[i])
+    for i in range(0, len(arr)):
+        if arr[i] % 2 == 1:
+            brr.append(arr[i])
+    ans = f"{brr[0]} "
+    for i in range(1, len(brr)):
+        ans += f" {brr[i]}"
+    print(ans)
+    t -= 1
 
 

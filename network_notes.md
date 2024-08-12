@@ -2,7 +2,15 @@
 .red{
 color: goldenrod;
 }
-
+code{
+font-size: 1.5rem;
+}
+pre code{
+font-size: 1.5rem;
+}
+li{
+font-size: 1.5rem;
+}
 h1{
 color: indianred;
 }
@@ -27,20 +35,25 @@ font-size: 1.4rem;;
 
 # OSI and TCP/IP models.
 every protocol has its own header.
-OSI - open system interconnect model divide the network into 7 layer.
+OSI - __Open System Interconnect Model__ divide the network into 7 layer.
 The layers are:
-application 
-presentation
-session 
-transport
-network
-data link
-physical
+- **application** 
+- **presentation**
+- **session** 
+- **transport**
+- **network**
+- **data link**
+- **physical**
 ## TCP/IP model
 it has 4 layers. This is the model that is actually implemented in the internet.
 # Layers of OSI Model.
 
 ## physical.
+`this is a  code block`
+```python
+def hello():
+    print("Hello World!")
+```
 physical layer is simply the physical media. It might be wireless media or wired media like fiber optic or copper wire. It uses the 0 and 1 binary digits to send the data.
 
 ## data link layer
